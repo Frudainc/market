@@ -1,0 +1,42 @@
+.mailing {
+  background: $black;
+  padding: 100px 0;
+}
+
+.mailing-form {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.mailing-fields {
+  position: relative;
+
+  input[type='email'] {
+    font-size: 32px;
+    border-bottom: 4px solid #fcfaf5;
+    padding: 22px 80px 22px 0;
+    color: $white;
+
+    @media (min-width: $largebp) {
+      font-size: 48px;
+      padding: 22px 108px 22px 0;
+    }
+
+    &::placeholder {
+      color: $white50;
+    }
+  }
+
+  button[type='submit'] {
+    color: $white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 60px;
+
+    @media (min-width: $largebp) {
+      width: 88px;
+    }
+  }
+}

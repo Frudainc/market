@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import { Navigation, Header } from './'
+import { Header, InfoBar, Mailing, Footer } from './'
 
-class Template extends React.Component {
+class Base extends React.Component {
   render() {
     const { location, children } = this.props
     let header
@@ -16,10 +15,13 @@ class Template extends React.Component {
     return (
       <>
         <Header />
+        <InfoBar />
         {children}
+        <Mailing />
+        <Footer />
       </>
     )
   }
 }
 
-export default Template
+export default Base

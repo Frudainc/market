@@ -3,7 +3,13 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import { ArticlePreview, Base, Hero, Header } from '../components'
+import {
+  ArticlePreview,
+  Base,
+  Herald,
+  NewExperience,
+  UpcomingEvents,
+} from '../components'
 
 class RootIndex extends React.Component {
   render() {
@@ -13,21 +19,31 @@ class RootIndex extends React.Component {
 
     return (
       <Base location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+        <Helmet title={siteTitle} />
+
+        <div className="home-top">
+          <div className="width">
+            <div className="home-top-flex">
+              <NewExperience />
+              <UpcomingEvents />
+            </div>
           </div>
         </div>
+
+        {/* <div className="wrapper">
+          <h2 className="section-headline">Recent articles</h2>
+          <ul className="article-list">
+            {posts.map(({ node }) => {
+              return (
+                <li key={node.slug}>
+                  <ArticlePreview article={node} />
+                </li>
+              )
+            })}
+          </ul>
+        </div> */}
+
+        <Herald />
       </Base>
     )
   }

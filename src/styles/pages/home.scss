@@ -1,0 +1,24 @@
+.home-top {
+  margin-top: 50px;
+}
+
+.home-top-flex {
+  @media (min-width: $largebp) {
+    display: flex;
+    width: 100%;
+  }
+
+  .new-experience {
+    @media (min-width: $largebp) {
+      flex: 1;
+      margin-right: 50px;
+    }
+  }
+
+  .upcoming-events {
+    @media (min-width: $largebp) {
+      width: 40%;
+      max-width: 410px;
+    }
+  }
+}

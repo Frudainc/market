@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import classNames from 'classnames'
+import onClickOutside from 'react-onclickoutside'
 
 import { Logo } from '../svg'
 
-export default class Header extends Component {
+export class Header extends Component {
   state = {
     navActive: false,
   }
@@ -12,6 +13,12 @@ export default class Header extends Component {
   toggleNav = () => {
     this.setState({
       navActive: !this.state.navActive,
+    })
+  }
+
+  handleClickOutside = () => {
+    this.setState({
+      navActive: false,
     })
   }
 
@@ -34,22 +41,34 @@ export default class Header extends Component {
 
           <ul className="nav">
             <li>
-              <Link to="/">About</Link>
+              <Link onClick={this.toggleNav} to="/">
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/">Events</Link>
+              <Link onClick={this.toggleNav} to="/">
+                Events
+              </Link>
             </li>
             <li>
-              <Link to="/">What's New</Link>
+              <Link onClick={this.toggleNav} to="/">
+                What's New
+              </Link>
+            </li>
+            <li className="nav-right">
+              <Link onClick={this.toggleNav} to="/">
+                Herald
+              </Link>
             </li>
             <li>
-              <Link to="/">Herald</Link>
+              <Link onClick={this.toggleNav} to="/">
+                Getchell's
+              </Link>
             </li>
             <li>
-              <Link to="/">Getchell's</Link>
-            </li>
-            <li>
-              <Link to="/">Find Us</Link>
+              <Link onClick={this.toggleNav} to="/">
+                Find Us
+              </Link>
             </li>
           </ul>
         </div>
@@ -57,3 +76,5 @@ export default class Header extends Component {
     )
   }
 }
+
+export default onClickOutside(Header)

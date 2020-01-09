@@ -1,0 +1,120 @@
+.footer {
+  @media (min-width: $largebp) {
+    display: flex;
+  }
+}
+
+.footer-left,
+.footer-right {
+  @media (min-width: $largebp) {
+    width: 50%;
+  }
+}
+
+.footer-left {
+  height: 400px;
+  background: #f6f6f6;
+  background-image: url('/footer-map.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  @media (min-width: $smallbp) {
+    height: 500px;
+  }
+
+  @media (min-width: $largebp) {
+    height: 600px;
+  }
+
+  @media (min-width: $xlargebp) {
+    height: 720px;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer-right {
+  background: $white;
+  padding: 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $smallbp) {
+    padding: 40px;
+    height: 500px;
+  }
+
+  @media (min-width: $smbp) {
+    padding: 66px;
+  }
+
+  @media (min-width: $largebp) {
+    height: 600px;
+    padding: 50px;
+  }
+
+  @media (min-width: $xlargebp) {
+    height: 720px;
+    padding: 66px;
+  }
+}
+
+.footer-right-top {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.footer-columns {
+  display: flex;
+  width: 100%;
+}
+
+.footer-column {
+  width: 50%;
+
+  li,
+  a {
+    color: $black;
+    font-size: 18px;
+
+    @media (min-width: $smbp) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $xlargebp) {
+      font-size: 24px;
+    }
+  }
+
+  li + li {
+    margin-top: 20px;
+  }
+}
+
+.footer-right-bottom {
+  display: flex;
+  font-weight: 300;
+
+  ul {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  li + li {
+    margin-left: 40px;
+  }
+
+  a {
+    color: $black;
+    text-decoration: underline;
+  }
+}

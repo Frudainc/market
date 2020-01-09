@@ -1,0 +1,70 @@
+.herald-columns {
+  border-top: 4px solid $black;
+  padding: 70px 0;
+  position: relative;
+
+  @media (min-width: $largebp) {
+    display: flex;
+    padding: 90px 0 0;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $xlargebp) {
+    padding: 110px 0 0;
+    margin-bottom: 110px;
+  }
+
+  &::after {
+    content: '';
+    width: 42%;
+    max-width: 520px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    height: 4px;
+    background: $black;
+  }
+}
+
+.herald-left-column {
+  padding-bottom: 60px;
+
+  @media (min-width: $largebp) {
+    width: 42%;
+  }
+}
+
+.herald-left-columns-content {
+  max-width: 520px;
+  margin: 0 auto;
+
+  @media (min-width: $largebp) {
+    margin: 0;
+  }
+
+  .herald-line {
+    margin: 46px 0 40px;
+
+    @media (min-width: $largebp) {
+      margin: 56px 0 50px;
+    }
+  }
+
+  p {
+    font-family: $serif;
+    font-size: 18px;
+    margin-bottom: 40px;
+
+    @media (min-width: $largebp) {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.herald-right-column {
+  @media (min-width: $largebp) {
+    flex: 1;
+    margin-left: 80px;
+  }
+}

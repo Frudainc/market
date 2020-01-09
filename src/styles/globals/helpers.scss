@@ -1,5 +1,5 @@
 .width {
-  max-width: 1160px;
+  max-width: 1320px;
   margin: 0 auto;
   width: 92%;
 }
@@ -15,4 +15,8 @@
 .offscreen {
   position: absolute;
   left: -9999px;
+}
+
+.caps {
+  text-transform: uppercase;
 }
