@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
@@ -9,7 +9,10 @@ import {
   Herald,
   NewExperience,
   UpcomingEvents,
+  HomeIssueArticle,
+  TableOfContents,
 } from '../components'
+import { LoopArrow } from '../svg'
 
 class RootIndex extends React.Component {
   render() {
@@ -30,18 +33,34 @@ class RootIndex extends React.Component {
           </div>
         </div>
 
-        {/* <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
-          <ul className="article-list">
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node} />
-                </li>
-              )
-            })}
-          </ul>
-        </div> */}
+        <div className="home-issue">
+          <div className="width">
+            <div className="home-issue-left">
+              <h2>
+                January
+                <br />
+                Issue
+              </h2>
+              <p>
+                Our top picks of the week. Come join us at the Market to see for
+                yourself.
+              </p>
+            </div>
+
+            <div className="home-issue-right">
+              {posts.map(({ node }) => {
+                return <HomeIssueArticle key={node.slug} article={node} />
+              })}
+
+              <Link className="home-issue-more" to="/">
+                <span>More in our Magazine</span>
+                <LoopArrow />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <TableOfContents />
 
         <Herald />
       </Base>
@@ -66,8 +85,9 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+            id
+            file {
+              url
             }
           }
           description {

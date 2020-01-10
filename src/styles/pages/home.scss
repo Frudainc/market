@@ -1,5 +1,9 @@
 .home-top {
   margin-top: 50px;
+
+  @media (min-width: $largebp) {
+    margin-bottom: 90px;
+  }
 }
 
 .home-top-flex {
@@ -9,16 +13,114 @@
   }
 
   .new-experience {
+    margin-bottom: 70px;
+
     @media (min-width: $largebp) {
+      margin-bottom: 0;
       flex: 1;
       margin-right: 50px;
     }
   }
 
   .upcoming-events {
+    margin-bottom: 70px;
+
     @media (min-width: $largebp) {
       width: 40%;
       max-width: 410px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.home-issue {
+  margin-bottom: 120px;
+
+  @media (min-width: $largebp) {
+    margin-bottom: 200px;
+  }
+
+  .width {
+    @media (min-width: $largebp) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+}
+
+.home-issue-left {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $largebp) {
+    max-width: 340px;
+    margin-right: -50px;
+    position: sticky;
+    top: 20px;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $xlargebp) {
+    max-width: 400px;
+    margin-right: -80px;
+  }
+
+  h2 {
+    font-size: 110px;
+    margin-bottom: 20px;
+
+    @media (min-width: $xlargebp) {
+      font-size: 120px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-family: $serif;
+
+    @media (min-width: $xlargebp) {
+      font-size: 20px;
+    }
+  }
+}
+
+.home-issue-right {
+  @media (min-width: $largebp) {
+    flex: 1;
+    margin-top: 90px;
+  }
+}
+
+.home-issue-more {
+  display: block;
+  position: relative;
+  font-size: 24px;
+  color: $black;
+  margin-top: 40px;
+  width: 100%;
+
+  @media (min-width: $smbp) {
+    font-size: 32px;
+  }
+
+  span {
+    display: inline-block;
+    border-bottom: 4px solid $black;
+    line-height: 1.3;
+    flex: 1;
+  }
+
+  svg {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 230px;
+
+    @media (min-width: $smbp) {
+      width: 120px;
+      left: 300px;
     }
   }
 }

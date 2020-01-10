@@ -1,0 +1,48 @@
+.upcoming-events {
+  h2 {
+    background: $black;
+    color: $white;
+    font-size: 26px;
+    line-height: 66px;
+    text-align: center;
+
+    @media (min-width: $largebp) {
+      font-size: 32px;
+      line-height: 66px;
+    }
+  }
+}
+
+.upcoming-events-more {
+  position: relative;
+  color: $black;
+  margin-top: 56px;
+  display: block;
+
+  span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 32px;
+    border-bottom: 4px solid black;
+    line-height: 1;
+    padding-bottom: 7px;
+  }
+
+  svg {
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    left: 220px;
+  }
+}
+
+.upcoming-events-star {
+  width: 70px;
+  margin-top: 60px;
+
+  @media (min-width: $largebp) {
+    display: block;
+    width: 107px;
+    margin-top: 100px;
+  }
+}

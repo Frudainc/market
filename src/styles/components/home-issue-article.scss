@@ -1,0 +1,66 @@
+.home-issue-article {
+  @media (min-width: $smbp) {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  & + & {
+    margin-top: 40px;
+  }
+
+  .new-item {
+    width: 80px;
+    margin-bottom: 15px;
+
+    @media (min-width: $mediumbp) {
+      width: 100px;
+    }
+  }
+
+  h3 {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+}
+
+.home-issue-article-image {
+  margin-bottom: 20px;
+
+  @media (min-width: $smbp) {
+    flex: 1;
+    margin: 0;
+  }
+}
+
+.home-issue-article-text {
+  border-bottom: 4px solid $black;
+  padding-bottom: 30px;
+
+  @media (min-width: $smbp) {
+    width: 280px;
+    margin-left: 16px;
+  }
+
+  @media (min-width: $mediumbp) {
+    width: 310px;
+    padding-bottom: 40px;
+  }
+}
+
+.home-issue-article-text-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  time {
+    font-size: 16px;
+  }
+
+  a {
+    display: inline-block;
+    border-bottom: 2px solid $black;
+    line-height: 1;
+    font-size: 18px;
+    color: $black;
+  }
+}

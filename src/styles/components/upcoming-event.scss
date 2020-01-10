@@ -1,0 +1,26 @@
+.upcoming-event {
+  border-bottom: 4px solid $black;
+  padding: 30px 0;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 128px;
+    margin-left: 20px;
+  }
+}
+
+.upcoming-event-left {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  time {
+    margin-top: auto;
+  }
+}

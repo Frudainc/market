@@ -8,6 +8,9 @@ import Herald from './Herald'
 import Button from './Button'
 import NewExperience from './NewExperience'
 import UpcomingEvents from './UpcomingEvents'
+import UpcomingEvent from './UpcomingEvent'
+import HomeIssueArticle from './HomeIssueArticle'
+import TableOfContents from './TableOfContents'
 
 export {
   ArticlePreview,
@@ -20,4 +23,7 @@ export {
   Button,
   NewExperience,
   UpcomingEvents,
+  UpcomingEvent,
+  HomeIssueArticle,
+  TableOfContents,
 }
